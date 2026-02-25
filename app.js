@@ -64,8 +64,7 @@ function normalizePerson(p){
   p.photo = p.photo || "";
   return p;
 }
-const SHARE_BASE = "https://jjoyflanders-ctrl.github.io/Highlight-Digital-Card-W-Headshot-v3/";
-
+const SHARE_BASE = `${window.location.origin}${window.location.pathname}`;
 function currentCardUrl(slug){
   const u = new URL(SHARE_BASE);
   u.searchParams.set("u", slug);
