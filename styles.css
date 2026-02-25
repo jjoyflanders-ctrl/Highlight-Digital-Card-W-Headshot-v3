@@ -131,6 +131,38 @@ code{font-family:var(--mono); background:#eef2f7; padding:2px 6px; border-radius
   box-shadow: var(--shadow);
   padding: 0 18px 92px;
 }
+/* MOBILE: Force the green header to be a big circle instead of a rectangle */
+.mTopGreen,
+.mHero{
+  position: relative !important;
+  overflow: hidden !important;
+  background: transparent !important; /* removes rectangle */
+  padding-bottom: 110px !important;   /* gives the circle room */
+}
+
+/* The actual big green circle */
+.mTopGreen::before,
+.mHero::before{
+  content:"";
+  position:absolute;
+  top:-210px;
+  left:50%;
+  transform:translateX(-50%);
+  width:720px;
+  height:720px;
+  background:var(--hi);
+  border-radius:50%;
+  z-index:0;
+}
+
+/* Keep the logo + photo above the circle */
+.mLogo,
+.mPhotoCircle,
+.mPhoto,
+.mPhotoWrap{
+  position:relative !important;
+  z-index:2 !important;
+}
 .mQrBox{display:flex; justify-content:center; padding-top: 32px;}
 .qr--mobile{width: 210px; height: 210px; border-radius: 20px;}
 .mName{text-align:center; font-size: 44px; margin: 14px 0 0; letter-spacing:-.02em;}
