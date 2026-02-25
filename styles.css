@@ -105,11 +105,13 @@ body{ margin:0; font-family: var(--barlow); background: var(--bg); color: var(--
 .mTopGreen::before{
   content: "";
   position: absolute;
-  top: -210px;               /* moves circle up/down */
+  top: -320px;                 /* move circle higher */
   left: 50%;
   transform: translateX(-50%);
-  width: 720px;
-  height: 720px;
+  width: 110vw;                /* scale based on screen width */
+  height: 110vw;
+  max-width: 900px;            /* prevent it from getting insane on tablets */
+  max-height: 900px;
   background: var(--hi);
   border-radius: 50%;
   z-index: 0;
