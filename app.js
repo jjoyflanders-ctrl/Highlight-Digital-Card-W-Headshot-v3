@@ -64,13 +64,13 @@ function normalizePerson(p){
   p.photo = p.photo || "";
   return p;
 }
-const SHARE_BASE = `${window.location.origin}${window.location.pathname}`;
-  return u.toString();function currentCardUrl(slug){
-  const base = SHARE_BASE.endsWith("/") ? SHARE_BASE : (SHARE_BASE + "/");
-  const u = new URL(base);
+// Always generate share URLs based on the current page (works for v3/v4/v5, etc.)
+const SHARE_BASE = new URL(".", window.location.href).toString();
+
+function currentCardUrl(slug){
+  const u = new URL(SHARE_BASE);
   u.searchParams.set("u", slug);
   return u.toString();
-}
 }
 function setQrImg(imgEl, url, size=240){
   if(!imgEl) return;
