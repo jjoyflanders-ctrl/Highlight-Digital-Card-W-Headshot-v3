@@ -1,4 +1,4 @@
-const CACHE = "highlight-contact-newdesign-v1";
+const CACHE = "highlight-contact-newdesign-v2";
 const CORE = [
   "./",
   "./index.html",
