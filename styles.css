@@ -7,7 +7,7 @@
   --shadow: 0 24px 60px rgba(0,0,0,.14);
   --radius: 22px;
   --barlow: "Barlow Semi Condensed", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  --glacial: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --glacial: "Montserrat", sans-serif;, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
