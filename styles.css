@@ -29,8 +29,21 @@ body{ margin:0; font-family: var(--barlow); background: var(--bg); color: var(--
 .installBtn{ padding:12px 16px; border-radius:14px; border:1px dashed rgba(0,0,0,.25); background:transparent; font-weight:900; cursor:pointer; white-space:nowrap; }
 .installBtn:hover{ background:#f0f1f3; }
 
-.cardDesktop{ display:grid; grid-template-columns: 1.2fr .9fr; background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; }
+.cardDesktop{ display:grid; grid-template-columns: 1.2fr .9fr; background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; position:relative; }
 .cardLeft{ padding:34px 34px 28px; }
+
+.cardDesktop::after {
+  content: "";
+  position: absolute;
+  right: -35%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 900px;
+  height: 900px;
+  background: var(--hi);
+  border-radius: 50%;
+  z-index: 1;
+}
 
 .nameBlock .nameFirst{ font-family:var(--glacial); font-size:66px; letter-spacing:.02em; line-height:.9; }
 .nameBlock .nameLast{ font-family:var(--glacial); font-size:74px; font-weight:900; letter-spacing:.02em; line-height:.9; }
@@ -50,7 +63,15 @@ body{ margin:0; font-family: var(--barlow); background: var(--bg); color: var(--
 .btnGhost:hover{ background:#e8edf3; }
 .btnFull{ width:100%; }
 
-.cardRight{ background:var(--hi); padding:24px; display:flex; flex-direction:column; align-items:center; }
+.cardRight{
+  position:relative;
+  padding: 24px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background: transparent;   /* remove square green */
+  z-index: 2;
+}
 .logoOnGreen{ width:100%; text-align:right; color:#0b0f14; font-weight:900; filter: blur(.2px); margin-bottom:14px; }
 .logoOnGreen .logoText{ font-size:44px; letter-spacing:.02em; display:block; }
 .logoOnGreen .logoSub{ font-size:18px; letter-spacing:.18em; opacity:.85; }
