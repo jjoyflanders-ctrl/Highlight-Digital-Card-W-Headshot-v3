@@ -65,10 +65,12 @@ function normalizePerson(p){
   return p;
 }
 const SHARE_BASE = `${window.location.origin}${window.location.pathname}`;
-function currentCardUrl(slug){
-  const u = new URL(SHARE_BASE);
+  return u.toString();function currentCardUrl(slug){
+  const base = SHARE_BASE.endsWith("/") ? SHARE_BASE : (SHARE_BASE + "/");
+  const u = new URL(base);
   u.searchParams.set("u", slug);
   return u.toString();
+}
 }
 function setQrImg(imgEl, url, size=240){
   if(!imgEl) return;
