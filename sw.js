@@ -1,16 +1,17 @@
-const CACHE = "highlight-contact-v13"; // bump this anytime you want to force refresh
+const CACHE = "highlight-digital-card-v4"; // bump this anytime you want to force refresh
 
 const ASSETS = [
   "./",
   "./index.html",
-  "./styles.css",
-  "./app.js",
+  "./styles.css?v=4",
+  "./app.js?v=4",
   "./employees.csv",
   "./manifest.webmanifest",
+  "./sw.js",
+  "./assets/header.png",
+  "./assets/building.jpg",
   "./assets/icon-192.png",
   "./assets/icon-512.png",
-  "./assets/header.png",
-  "./assets/building.jpg"
 ];
 
 self.addEventListener("install", (e) => {
