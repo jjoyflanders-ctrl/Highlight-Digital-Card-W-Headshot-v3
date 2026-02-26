@@ -77,45 +77,45 @@
     </div>
   </section>
 
-  <!-- Mobile -->
-  <section class="mobile" aria-label="Mobile view">
-    <div class="mTopGreen">
-     <div class="mLogo">
-  <img src="./assets/mobile-logo.png" alt="Highlight Industries" />
-</div>
-      <div class="mPhotoCircle">
-        <img id="mPhoto" src="./assets/building.jpg" data-fallback="./assets/building.jpg" alt="Employee or Highlight building" />
-      </div>
+ <!-- Mobile -->
+<section class="mobile" aria-label="Mobile view">
+  <div class="mTopGreen">
+    <div class="mLogo">
+      <img src="./assets/mobile-logo.png" alt="Highlight Industries" />
+    </div>
+  </div>
+
+  <div class="mContent">
+    <div class="mNameBlock">
+      <div class="mNameFirst" id="mFirst">Loading…</div>
+      <div class="mNameLast" id="mLast"></div>
+      <div class="mUnderline"></div>
+      <div class="mTitle" id="mTitle"></div>
     </div>
 
-
-       <!-- QR between name and picture -->
-    
-    <div class="mContent">
-      <div class="mNameBlock">
-        <div class="mNameFirst" id="mFirst">Loading…</div>
-        <div class="mNameLast" id="mLast"></div>
-        <div class="mUnderline"></div>
-        <div class="mTitle" id="mTitle"></div>
-      </div>
-
-       <div class="mQrWrap" aria-label="Share QR">
-        <img id="mQrImg" alt="QR code" />
-      </div>
-
-      <div class="mContact">
-        <a class="mRow" id="mEmailLink" href="#"><span class="mIco">✉</span><span id="mEmail"></span></a>
-        <a class="mRow" id="mPhoneLink" href="#"><span class="mIco">☎</span><span id="mPhone"></span></a>
-        <a class="mRow" id="mWebLink" href="#"><span class="mIco">🌐</span><span id="mWebsite"></span></a>
-      </div>
+    <!-- QR between name and picture -->
+    <div class="mQrWrap" aria-label="Share QR">
+      <img id="mQrImg" alt="QR code" />
     </div>
 
-    <div class="mBottomBar">
-      <button class="mBtn mBtnSave" id="saveBtnMobile" type="button">Save</button>
-      <button class="mBtn" id="findBtnMobile" type="button">Find</button>
-      <button class="mBtn" id="shareBtn" type="button">Share</button>
+    <!-- Photo moved BELOW QR -->
+    <div class="mPhotoCircle">
+      <img id="mPhoto" src="./assets/building.jpg" data-fallback="./assets/building.jpg" alt="Employee or Highlight building" />
     </div>
-  </section>
+
+    <div class="mContact">
+      <a class="mRow" id="mEmailLink" href="#"><span class="mIco">✉</span><span id="mEmail"></span></a>
+      <a class="mRow" id="mPhoneLink" href="#"><span class="mIco">☎</span><span id="mPhone"></span></a>
+      <a class="mRow" id="mWebLink" href="#"><span class="mIco">🌐</span><span id="mWebsite"></span></a>
+    </div>
+  </div>
+
+  <div class="mBottomBar">
+    <button class="mBtn mBtnSave" id="saveBtnMobile" type="button">Save</button>
+    <button class="mBtn" id="findBtnMobile" type="button">Find</button>
+    <button class="mBtn" id="shareBtn" type="button">Share</button>
+  </div>
+</section>
 
   <!-- Send to Phone modal -->
   <div class="modal" id="sendModal" aria-hidden="true">
