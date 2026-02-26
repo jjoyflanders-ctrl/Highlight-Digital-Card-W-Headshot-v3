@@ -256,26 +256,29 @@ body{
    Mobile layout
    ========================= */
 .mTopGreen{
-  background:var(--hi);
-  padding:24px 18px 170px;   /* enough green to land below the photo */
-  overflow:hidden;
-  position:relative;
+  position: relative;
+  background: var(--hi);
+  overflow: hidden;
+  padding: 24px 18px 160px;   /* space for photo */
 }
 
-/* Curved edge */
+/* Create a MUCH larger circle */
 .mTopGreen::before{
   content:"";
   position:absolute;
   left:50%;
   transform:translateX(-50%);
-  width:140vw;
-  height:140vw;
-  max-width:1020px;
-  max-height:1020px;
-  top:-420px;                /* lower curve = less negative */
-  background:var(--hi);
-  border-radius:50%;
-  z-index:0;
+  
+  width: 180vw;              /* much bigger */
+  height: 180vw;
+  max-width: 1400px;
+  max-height: 1400px;
+
+  top: -520px;               /* pushes curve lower */
+  
+  background: var(--hi);
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .mLogo{
